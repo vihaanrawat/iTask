@@ -6,6 +6,7 @@ const App = () => {
 
   const addTask = () => {
     setTasks([...tasks,task])
+    setTask('')
   }
 
 
