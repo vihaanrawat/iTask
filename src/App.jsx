@@ -7,7 +7,7 @@ const App = () => {
   const addTask = () => {
     if (task.trim() === '') return
 
-    setTasks([...tasks, task])
+    setTasks([...tasks, {text:task,completed:false}])
     setTask('')
   }
 
@@ -35,7 +35,7 @@ const App = () => {
             
             <p key={index} className='bg-[#f8e7c7] border border-[#c49a6c] rounded-xl px-4 py-4 mb-3 text-[#5a321d] flex items-center gap-3'>
               <input type="checkbox" />
-              {item}
+              {item.text}
             </p>
           ))}
         </div>
