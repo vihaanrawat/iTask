@@ -28,7 +28,9 @@ const App = () => {
             className='flex-1 px-4 py-3 rounded-xl border border-[#8b5e3c] outline-none' value={task} onChange={(e)=>setTask(e.target.value)} />
 
           <button onClick={addTask} className='px-5 py-3 bg-[#5a321d] text-white rounded-xl cursor-pointer hover:bg-[#7a4a2b] transition'>
+            
             Add
+            
           </button>
         </div>
       </div>
