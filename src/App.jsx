@@ -30,7 +30,10 @@ const App = () => {
           <button onClick={addTask} className='px-5 py-3 bg-[#5a321d] text-white rounded-xl cursor-pointer hover:bg-[#7a4a2b] transition'>
             Add
           </button>
+
+
         </div>
+        
       </div>
 
     </div>
