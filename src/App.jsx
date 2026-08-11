@@ -46,8 +46,6 @@ const App = () => {
                   const updatedTasks = tasks.filter((_,i)=> i!== index)
                   setTasks(updatedTasks)
                 }}>
-
-                  
               </button>
             </p>
           ))}
