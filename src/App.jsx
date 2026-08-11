@@ -5,11 +5,11 @@ const App = () => {
   const [tasks, setTasks] = useState([])
 
   const addTask = () => {
+    if(task.trim()=== '') return
+
     setTasks([...tasks,task])
     setTask('')
   }
-
-
 
   return (
 
