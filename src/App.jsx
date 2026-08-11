@@ -9,7 +9,7 @@ const App = () => {
   }
 
 
-  
+
   return (
 
     <div className="min-h-screen bg-linear-to-br from-[#2f170c] via-[#6b3e22] to-[#32180d] flex items-center">
@@ -23,7 +23,7 @@ const App = () => {
         </p>
         <div className='mt-10 flex gap-3'>
           <input type="text" placeholder='What needs to be done?'
-            className='flex-1 px-4 py-3 rounded-xl border border-[#8b5e3c] outline-none' value={task} onChange={(e)=>setTask(e.target.value)} />
+            className='flex-1 px-4 py-3 rounded-xl border border-[#8b5e3c] outline-none' value={task} onChange={(e) => setTask(e.target.value)} />
 
           <button onClick={addTask} className='px-5 py-3 bg-[#5a321d] text-white rounded-xl cursor-pointer hover:bg-[#7a4a2b] transition'>
             Add
@@ -31,8 +31,6 @@ const App = () => {
         </div>
 
       </div>
-
-
     </div>
 
   )
