@@ -29,6 +29,13 @@ const App = () => {
             Add
           </button>
         </div>
+        <div className='mt-6'>
+          {tasks.map((item,index)=>(
+            <p key={index}>
+              {item}
+            </p>
+          ))}
+        </div>
 
       </div>
     </div>
