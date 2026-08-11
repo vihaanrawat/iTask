@@ -5,7 +5,7 @@ const App = () => {
   const [tasks, setTasks] = useState([])
 
   const addTask = () => {
-    console.log(task)
+    setTasks([...tasks,task])
   }
 
 
