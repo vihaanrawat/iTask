@@ -5,9 +5,9 @@ const App = () => {
   const [tasks, setTasks] = useState([])
 
   const addTask = () => {
-    if(task.trim()=== '') return
+    if (task.trim() === '') return
 
-    setTasks([...tasks,task])
+    setTasks([...tasks, task])
     setTask('')
   }
 
@@ -31,8 +31,8 @@ const App = () => {
           </button>
         </div>
         <div className='mt-6'>
-          {tasks.map((item,index)=>(
-            <p key={index}>
+          {tasks.map((item, index) => (
+            <p key={index} className='bg-[#f8e7c7] border border-[#c49a6c] rounded-xl px-4 py-4 mb-3 text-[#5a321d]'>
               {item}
             </p>
           ))}
