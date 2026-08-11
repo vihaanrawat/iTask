@@ -17,11 +17,9 @@ const App = () => {
 
         <h1 className='mt-8 text-4xl font-bold text-[#5a321d] text-center'>
           iTask
-
         </h1>
         <p className='text-[#8b5e3c] text-center mt-2'>
           Your Task Planner
-
         </p>
         <div className='mt-10 flex gap-3'>
           <input type="text" placeholder='What needs to be done?'
@@ -30,11 +28,10 @@ const App = () => {
           <button onClick={addTask} className='px-5 py-3 bg-[#5a321d] text-white rounded-xl cursor-pointer hover:bg-[#7a4a2b] transition'>
             Add
           </button>
-
-
         </div>
-        
+
       </div>
+
 
     </div>
 
