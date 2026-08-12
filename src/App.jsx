@@ -47,7 +47,7 @@ const App = () => {
                   setTasks(updatedTasks)
                   
                 }}>
-                  🗑️
+                  
               </button>
             </p>
           ))}
