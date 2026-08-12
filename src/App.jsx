@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { MdDelete } from "react-icons/md";
 
 const App = () => {
   const [task, setTask] = useState('')
@@ -45,8 +46,8 @@ const App = () => {
               <button onClick={()=>{
                   const updatedTasks = tasks.filter((_,i)=> i!== index)
                   setTasks(updatedTasks)
-                  
                 }}>
+                  <FaTrash />
                   
               </button>
             </p>
