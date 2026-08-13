@@ -48,7 +48,7 @@ const App = () => {
 
               </div>
 
-              <button onClick={() => {
+              <button className='text-[#8b5e3c] hover:text-red-700 transition cursor-pointer' onClick={() => {
                 const updatedTasks = tasks.filter((_, i) => i !== index)
                 setTasks(updatedTasks)
               }}>
