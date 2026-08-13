@@ -34,7 +34,7 @@ const App = () => {
         <div className='mt-6'>
           {tasks.map((item, index) => (
 
-            <p key={index} className={`bg-[#f8e7c7] border border-[#c49a6c] rounded-xl px-4 py-4 mb-3 text-[#5a321d] flex items-center jusgap-3 ${item.completed ? 'line-through opacity-60' : ''
+            <p key={index} className={`bg-[#f8e7c7] border border-[#c49a6c] rounded-xl px-4 py-4 mb-3 text-[#5a321d] flex items-center justify-between gap-3 ${item.completed ? 'line-through opacity-60' : ''
               }`}>
 
 
