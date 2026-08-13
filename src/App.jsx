@@ -34,21 +34,26 @@ const App = () => {
         <div className='mt-6'>
           {tasks.map((item, index) => (
 
-            <p key={index} className={`bg-[#f8e7c7] border border-[#c49a6c] rounded-xl px-4 py-4 mb-3 text-[#5a321d] flex items-center gap-3 ${item.completed ? 'line-through opacity-60' : ''
+            <p key={index} className={`bg-[#f8e7c7] border border-[#c49a6c] rounded-xl px-4 py-4 mb-3 text-[#5a321d] flex items-center jusgap-3 ${item.completed ? 'line-through opacity-60' : ''
               }`}>
-              <input type="checkbox" checked={item.completed} onChange={() => {
-                const updatedTasks = [...tasks]
-                updatedTasks[index].completed = !updatedTasks[index].completed
-                setTasks(updatedTasks)
-              }} />
-              {item.text}
 
-              <button onClick={()=>{
-                  const updatedTasks = tasks.filter((_,i)=> i!== index)
+
+              <div className='flex items-center gap-3'>
+                <input type="checkbox" checked={item.completed} onChange={() => {
+                  const updatedTasks = [...tasks]
+                  updatedTasks[index].completed = !updatedTasks[index].completed
                   setTasks(updatedTasks)
-                }}>
-                  <FaTrash/>
-                  
+                }} />
+                {item.text}
+
+              </div>
+
+              <button onClick={() => {
+                const updatedTasks = tasks.filter((_, i) => i !== index)
+                setTasks(updatedTasks)
+              }}>
+                <FaTrash />
+
               </button>
             </p>
           ))}
