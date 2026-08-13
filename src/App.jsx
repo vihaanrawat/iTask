@@ -5,6 +5,7 @@ import { FaEdit } from "react-icons/fa";
 const App = () => {
   const [task, setTask] = useState('')
   const [tasks, setTasks] = useState([])
+  const [editIndex,setEditIndex] = useState(null)
 
   const addTask = () => {
     if (task.trim() === '') return
@@ -49,6 +50,8 @@ const App = () => {
 
               </div>
 
+              <div className='flex items-center gap-3'>
+
               <button className='text-[#8b5e3c] hover:text-[#5a321d] transition cursor-pointer'>
                 <FaEdit />
 
@@ -61,6 +64,8 @@ const App = () => {
                 <FaTrash />
 
               </button>
+              </div>
+
             </p>
           ))}
         </div>
