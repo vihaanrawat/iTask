@@ -52,7 +52,7 @@ const App = () => {
 
               <div className='flex items-center gap-3'>
 
-              <button className='text-[#8b5e3c] hover:text-[#5a321d] transition cursor-pointer'>
+              <button className='text-[#8b5e3c] hover:text-[#5a321d] transition cursor-pointer' onClick={()=>setEditIndex(index)}>
                 <FaEdit />
 
               </button>
