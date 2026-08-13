@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FaTrash } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
 
 const App = () => {
   const [task, setTask] = useState('')
@@ -47,6 +48,11 @@ const App = () => {
                 {item.text}
 
               </div>
+
+              <button className='text-[#8b5e3c] hover:text-[#5a321d] transition cursor-pointer'>
+                <FaEdit />
+
+              </button>
 
               <button className='text-[#8b5e3c] hover:text-red-700 transition cursor-pointer' onClick={() => {
                 const updatedTasks = tasks.filter((_, i) => i !== index)
