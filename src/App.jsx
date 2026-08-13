@@ -10,7 +10,15 @@ const App = () => {
   const addTask = () => {
     if (task.trim() === '') return
 
-    setTasks([...tasks, { text: task, completed: false }])
+    if(editIndex!==null){
+      const updatedTasks = [...tasks]
+      updatedTasks[editIndex].text = task
+      setTasks(updatedTasks)
+      setEditIndex(null)
+
+    }else{
+      setTasks([...tasks,{text:task , completed:false}])
+    }
     setTask('')
   }
 
