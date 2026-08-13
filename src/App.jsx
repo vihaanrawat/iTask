@@ -6,6 +6,7 @@ const App = () => {
   const [task, setTask] = useState('')
   const [tasks, setTasks] = useState([])
   const [editIndex, setEditIndex] = useState(null)
+  const[filter,setFilter] = useState('all')
 
   const addTask = () => {
     if (task.trim() === '') return
