@@ -42,6 +42,16 @@ const App = () => {
             Add
           </button>
         </div>
+        <div className='flex gap-3 mt-6'>
+          <button onClick={()=>setFilter('all')}>All</button>
+
+          <button onClick={() => setFilter('active')}>Active</button>
+
+          <button onClick={() => setFilter('completed')}>Completed</button>
+
+        </div>
+
+
         <div className='mt-6'>
           {tasks.map((item, index) => (
 
