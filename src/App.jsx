@@ -61,6 +61,10 @@ const App = () => {
 
         </div>
 
+        <button onClick={clearCompleted} className='mt-3 text-sm text-[#8b5e3c] hover:text-red-700 cursor-pointer transition'>
+          Clear Completed
+        </button>
+
 
         <div className='mt-6'>
           {tasks.map((item, index) => ({ item, index })).filter(({ item }) => {
