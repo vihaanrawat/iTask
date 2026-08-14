@@ -42,6 +42,14 @@ const App = () => {
             Add
           </button>
         </div>
+
+        <p className='mt-6 text-[#8b5e3c]'>
+          {tasks.length} tasks • {tasks.filter(task=>task.completed).length} completed
+        </p>
+
+
+
+
         <div className='flex gap-3 mt-6'>
           <button onClick={()=>setFilter('all')}>All</button>
 
@@ -54,7 +62,7 @@ const App = () => {
 
         <div className='mt-6'>
           {tasks.map((item,index)=>({item,index})).filter(({item})=>{
-            
+
             if(filter==='active') return !item.completed
             if(filter==='completed') return item.completed
             return true
