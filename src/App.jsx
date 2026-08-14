@@ -54,6 +54,7 @@ const App = () => {
 
         <div className='mt-6'>
           {tasks.map((item,index)=>({item,index})).filter(({item})=>{
+            
             if(filter==='active') return !item.completed
             if(filter==='completed') return item.completed
             return true
