@@ -49,7 +49,6 @@ const App = () => {
 
 
 
-
         <div className='flex gap-3 mt-6'>
           <button onClick={()=>setFilter('all')} className='px-4 py-2 rounded-lg bg-[#5a321d] text-white cursor-pointer'>All</button>
 
