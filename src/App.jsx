@@ -6,21 +6,24 @@ const App = () => {
   const [task, setTask] = useState('')
   const [tasks, setTasks] = useState([])
   const [editIndex, setEditIndex] = useState(null)
-  const[filter,setFilter] = useState('all')
+  const [filter, setFilter] = useState('all')
 
   const addTask = () => {
     if (task.trim() === '') return
 
-    if(editIndex!==null){
+    if (editIndex !== null) {
       const updatedTasks = [...tasks]
       updatedTasks[editIndex].text = task
       setTasks(updatedTasks)
       setEditIndex(null)
 
-    }else{
-      setTasks([...tasks,{text:task , completed:false}])
+    } else {
+      setTasks([...tasks, { text: task, completed: false }])
     }
     setTask('')
+  }
+  const clearCompleted = () =>{
+    setTasks(tasks.filter(task => !task.completed))
   }
 
   return (
@@ -44,13 +47,13 @@ const App = () => {
         </div>
 
         <p className='mt-6 text-[#8b5e3c]'>
-          {tasks.length} tasks • {tasks.filter(task=>task.completed).length} completed
+          {tasks.length} tasks • {tasks.filter(task => task.completed).length} completed
         </p>
 
 
 
         <div className='flex gap-3 mt-6'>
-          <button onClick={()=>setFilter('all')} className='px-4 py-2 rounded-lg bg-[#5a321d] text-white cursor-pointer'>All</button>
+          <button onClick={() => setFilter('all')} className='px-4 py-2 rounded-lg bg-[#5a321d] text-white cursor-pointer'>All</button>
 
           <button onClick={() => setFilter('active')} className='px-4 py-2 rounded-lg border border-[#8b5e3c] text-[#5a321d] cursor-pointer'>Active</button>
 
@@ -60,12 +63,12 @@ const App = () => {
 
 
         <div className='mt-6'>
-          {tasks.map((item,index)=>({item,index})).filter(({item})=>{
+          {tasks.map((item, index) => ({ item, index })).filter(({ item }) => {
 
-            if(filter==='active') return !item.completed
-            if(filter==='completed') return item.completed
+            if (filter === 'active') return !item.completed
+            if (filter === 'completed') return item.completed
             return true
-          }).map(({item, index}) => (
+          }).map(({ item, index }) => (
 
             <p key={index} className={`bg-[#f8e7c7] border border-[#c49a6c] rounded-xl px-4 py-4 mb-3 text-[#5a321d] flex items-center justify-between gap-3 ${item.completed ? 'line-through opacity-60' : ''
               }`}>
