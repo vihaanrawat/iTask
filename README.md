@@ -1,16 +1,58 @@
-# React + Vite
+# iTask
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Todo List app built with React and Tailwind CSS.
 
-Currently, two official plugins are available:
+iTask lets you add, edit, complete, filter, and delete tasks from one clean interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+https://itask360.netlify.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Add tasks
+- Edit tasks
+- Delete tasks
+- Mark tasks as completed
+- Filter tasks by All, Active, and Completed
+- Clear completed tasks
+- Task counter
+- Responsive layout
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- Tailwind CSS
+- React Icons
+- Vite
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/vihaanrawat/iTask.git
+cd iTask
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Why I Built This
+
+I built iTask while learning React to get more comfortable with state, event handling, rendering lists, and working with arrays.
+
+It's a simple project, but it gave me a good chance to put those concepts together into something actually usable.
+
+## Author
+
+Vihaan Rawat
