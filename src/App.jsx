@@ -22,7 +22,7 @@ const App = () => {
     }
     setTask('')
   }
-  const clearCompleted = () =>{
+  const clearCompleted = () => {
     setTasks(tasks.filter(task => !task.completed))
   }
 
