@@ -54,7 +54,15 @@ const App = () => {
 
         <div className='flex gap-3 mt-6'>
 
-          <button onClick={() => setFilter('all')} className={`px-4 py-2 rounded-lg bg-[#5a321d] text-white cursor-pointer ${filter === 'all' ? 'bg-[#5a321d] text-white' : 'border border-[#8b5e3c] text-[#5a321d]'}`}>All</button>
+          <button
+            onClick={() => setFilter('all')}
+            className={`px-4 py-2 rounded-lg cursor-pointer ${filter === 'all'
+                ? 'bg-[#5a321d] text-white'
+                : 'border border-[#8b5e3c] text-[#5a321d]'
+              }`}
+          >
+            All
+          </button>
 
           <button
             onClick={() => setFilter('active')}
@@ -70,8 +78,8 @@ const App = () => {
           <button
             onClick={() => setFilter('completed')}
             className={`px-4 py-2 rounded-lg cursor-pointer ${filter === 'completed'
-                ? 'bg-[#5a321d] text-white'
-                : 'border border-[#8b5e3c] text-[#5a321d]'
+              ? 'bg-[#5a321d] text-white'
+              : 'border border-[#8b5e3c] text-[#5a321d]'
               }`}
           >
             Completed
