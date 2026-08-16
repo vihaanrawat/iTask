@@ -53,11 +53,30 @@ const App = () => {
 
 
         <div className='flex gap-3 mt-6'>
-          <button onClick={() => setFilter('all')} className='px-4 py-2 rounded-lg bg-[#5a321d] text-white cursor-pointer'>All</button>
 
-          <button onClick={() => setFilter('active')} className='px-4 py-2 rounded-lg border border-[#8b5e3c] text-[#5a321d] cursor-pointer'>Active</button>
+          <button onClick={() => setFilter('all')} className={`px-4 py-2 rounded-lg bg-[#5a321d] text-white cursor-pointer ${filter === 'all' ? 'bg-[#5a321d] text-white' : 'border border-[#8b5e3c] text-[#5a321d]'}`}>All</button>
 
-          <button onClick={() => setFilter('completed')} className='px-4 py-2 rounded-lg border border-[#8b5e3c] text-[#5a321d] cursor-pointer'>Completed</button>
+          <button
+            onClick={() => setFilter('active')}
+            className={`px-4 py-2 rounded-lg cursor-pointer ${filter === 'active'
+              ? 'bg-[#5a321d] text-white'
+              : 'border border-[#8b5e3c] text-[#5a321d]'
+              }`}
+          >
+            Active
+          </button>
+
+
+          <button
+            onClick={() => setFilter('completed')}
+            className={`px-4 py-2 rounded-lg cursor-pointer ${filter === 'completed'
+                ? 'bg-[#5a321d] text-white'
+                : 'border border-[#8b5e3c] text-[#5a321d]'
+              }`}
+          >
+            Completed
+          </button>
+
 
         </div>
 
